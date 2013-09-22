@@ -1,4 +1,4 @@
-{-# LANGUAGE TemplateHaskell, MultiParamTypeClasses, FlexibleInstances, FlexibleContexts, NoMonomorphismRestriction #-}
+{-# LANGUAGE TemplateHaskell, MultiParamTypeClasses, FlexibleInstances #-}
 -- | Helpers for instantiating Iterable for types with Vector containers.
 module Data.Iterable.Instantiate.Vector(gen_vector_iterable) where
 

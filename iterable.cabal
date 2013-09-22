@@ -31,7 +31,7 @@ source-repository head
 
 Library
   build-depends:    base, mtl, vector, template-haskell
-  other-extensions: TemplateHaskell MultiParamTypeClasses FlexibleInstances FlexibleContexts NoMonomorphismRestriction
+  other-extensions: TemplateHaskell, MultiParamTypeClasses, FlexibleInstances
   exposed-modules:  Data.Iterable, Data.Iterable.Instantiate, Data.Iterable.Instantiate.Vector
   exposed:          True
 

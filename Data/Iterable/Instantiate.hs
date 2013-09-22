@@ -1,4 +1,4 @@
-{-# LANGUAGE TemplateHaskell, MultiParamTypeClasses, FlexibleInstances, FlexibleContexts, NoMonomorphismRestriction #-}
+{-# LANGUAGE TemplateHaskell, MultiParamTypeClasses, FlexibleInstances #-}
 -- | Helpers for instantiating transitive and reflexive instances of Iterable.
 module Data.Iterable.Instantiate(self_iterable ,
                                  trans_iterable) where
