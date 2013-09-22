@@ -30,7 +30,7 @@ source-repository head
   location: git://github.com:mgajda/hpdb.git
 
 Library
-  build-depends:    base>4 && <=5, mtl, vector, template-haskell
+  build-depends:    base>4 && <=5, mtl >= 2.0, vector >= 0.9, template-haskell >= 2.7
   other-extensions: TemplateHaskell, MultiParamTypeClasses, FlexibleInstances
   exposed-modules:  Data.Iterable, Data.Iterable.Instantiate, Data.Iterable.Instantiate.Vector
   exposed:          True
