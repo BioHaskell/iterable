@@ -1,0 +1,6 @@
+dist/
+*.hi
+*.o
+*.hi_p
+*.p_o
+.*.swp
