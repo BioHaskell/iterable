@@ -1,9 +1,11 @@
 {-# LANGUAGE MultiParamTypeClasses #-}
+-- | Declares Iterable class for handling multi-level, heterogeneous, monomorphic collections that allow nested iteration.
 module Data.Iterable(Iterable(..)) where
 
 import Language.Haskell.TH.Syntax
 import Control.Monad.Identity(runIdentity,foldM)
 
+-- | Class for iterating all nested components `b` of type `a`.
 class Iterable a b where
   imapM   :: (Monad m) => (b -> m b) -> a -> m a
   imap    ::              (b ->   b) -> a ->   a
