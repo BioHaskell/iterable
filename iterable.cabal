@@ -1,6 +1,6 @@
 name:                iterable
-version:             0.1
-stability:           beta
+version:             1.0
+stability:           stable
 homepage:            https://github.com/mgajda/iterable
 package-url:         http://hackage.haskell.org/package/iterable
 synopsis:            API for hierarchical multilevel collections.
