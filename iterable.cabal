@@ -1,5 +1,5 @@
 name:                iterable
-version:             1.0
+version:             2.0
 stability:           stable
 homepage:            https://github.com/mgajda/iterable
 package-url:         http://hackage.haskell.org/package/iterable

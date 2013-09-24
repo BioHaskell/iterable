@@ -2,16 +2,15 @@
 -- | Declares Iterable class for handling multi-level, heterogeneous, monomorphic collections that allow nested iteration.
 module Data.Iterable(Iterable(..)) where
 
-import Language.Haskell.TH.Syntax
 import Control.Monad.Identity(runIdentity,foldM)
 
 -- | Class for iterating all nested components `b` of type `a`.
 class Iterable a b where
-  imapM   :: (Monad m) => (b -> m b) -> a -> m a
-  imap    ::              (b ->   b) -> a ->   a
-  imap f e = runIdentity $ imapM (return . f) e
-  ifoldM  :: (Monad m) => (c -> b -> m c) -> c -> a -> m c
-  ifoldr  ::              (b -> c ->   c) -> c -> a ->   c
-  ifoldl  ::              (c -> b ->   c) -> c -> a ->   c
-  ifoldl' ::              (c -> b ->   c) -> c -> a ->   c
-  ilength :: b -> a -> Int -- NOTE: b is 'dummy' type argument to satisfy Iterable a b constraint
+  itmapM   :: (Monad m) => (b -> m b) -> a -> m a
+  itmap    ::              (b ->   b) -> a ->   a
+  itmap f e = runIdentity $ itmapM (return . f) e
+  itfoldM  :: (Monad m) => (c -> b -> m c) -> c -> a -> m c
+  itfoldr  ::              (b -> c ->   c) -> c -> a ->   c
+  itfoldl  ::              (c -> b ->   c) -> c -> a ->   c
+  itfoldl' ::              (c -> b ->   c) -> c -> a ->   c
+  itlength :: b -> a -> Int -- NOTE: b is 'dummy' type argument to satisfy Iterable a b constraint
