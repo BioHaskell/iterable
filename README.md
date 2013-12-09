@@ -9,5 +9,4 @@ Used as a main interface to Protein Databank structures parsed by [hPDB](http://
 
 Details on official releases are on [Hackage](http://hackage.haskell.org/package/iterable).
 
-This package is also a part of [Stackage](http://daniel-diaz.github.io/stackagelist/)
-- a stable subset of Hackage.
+This package is also a part of [Stackage](http://daniel-diaz.github.io/stackagelist/) - a stable subset of Hackage.
