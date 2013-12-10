@@ -1,7 +1,7 @@
 name:                iterable
 version:             2.0
 stability:           stable
-homepage:            https://github.com/mgajda/iterable
+homepage:            https://github.com/BioHaskell/iterable
 package-url:         http://hackage.haskell.org/package/iterable
 synopsis:            API for hierarchical multilevel collections.
 description:         Two-argument typeclass that generalizes Foldable, Functor, and Traversable for monomorphic
@@ -22,12 +22,12 @@ bug-reports:         mailto:mjgajda@googlemail.com
 
 build-type:          Simple
 cabal-version:       >=1.8
-tested-with:         GHC==7.0.3, GHC==7.2.1, GHC==7.4.2, GHC==7.6.2
+tested-with:         GHC==7.0.3, GHC==7.2.1, GHC==7.4.2, GHC==7.6.2, GHC==7.6.3
 data-files:          README.md
 
 source-repository head
   type:     git
-  location: git://github.com:mgajda/hpdb.git
+  location: https://github.com/BioHaskell/iterable.git
 
 Library
   build-depends:    base>4 && <=5, mtl >= 2.0, vector >= 0.9, template-haskell >= 2.7
