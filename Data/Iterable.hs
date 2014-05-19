@@ -2,6 +2,7 @@
 -- | Declares Iterable class for handling multi-level, heterogeneous, monomorphic collections that allow nested iteration.
 module Data.Iterable(Iterable(..)) where
 
+import Data.Proxy(Proxy)
 import Control.Monad.Identity(runIdentity,foldM)
 
 -- | Class for iterating all nested components `b` of type `a`.
@@ -13,4 +14,4 @@ class Iterable a b where
   itfoldr  ::              (b -> c ->   c) -> c -> a ->   c
   itfoldl  ::              (c -> b ->   c) -> c -> a ->   c
   itfoldl' ::              (c -> b ->   c) -> c -> a ->   c
-  itlength :: b -> a -> Int -- NOTE: b is 'dummy' type argument to satisfy Iterable a b constraint
+  itlength :: Proxy b -> a -> Int

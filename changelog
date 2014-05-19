@@ -1,0 +1,11 @@
+-*-Changelog-*-
+
+3.0.0.0  May 2014
+	* Using Proxy in itlength. (Minor API change.)
+
+2.0.0.0  September 2013
+	* Method renaming imap -> itmap
+
+1.0.0.0  September 2013
+	* First release split out of hPDB library.
+

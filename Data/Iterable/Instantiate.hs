@@ -5,6 +5,7 @@ module Data.Iterable.Instantiate(self_iterable ,
 
 import           Language.Haskell.TH.Syntax
 import           Data.Iterable
+import           Data.Proxy(Proxy)
 
 -- | Generates convenience function for iterating over a single object.
 --self_iterable typA = gen_iterable typA typA [e| id |] [e| L.singleton |]
@@ -28,6 +29,6 @@ trans_iterable typA typB typC =
         itfoldr  f e a = (itfoldr  ::              ($(typB) -> c   ->   c) -> c   -> $(typA)   ->   c       ) (\bb cc -> itfoldr  f cc bb) e a
         itfoldl  f e a = (itfoldl  ::              (c -> $(typB)   ->   c) -> c   -> $(typA)   ->   c       ) (itfoldl  f) e a
         itfoldl' f e a = (itfoldl' ::              (c -> $(typB)   ->   c) -> c   -> $(typA)   ->   c       ) (itfoldl' f) e a
-        itlength _   a = (itfoldl' ::              (c -> $(typB)   ->   c) -> c   -> $(typA)   ->   c       ) (\a b-> a + itlength (undefined :: $(typC)) b) 0 a
+        itlength _   a = (itfoldl' ::              (c -> $(typB)   ->   c) -> c   -> $(typA)   ->   c       ) (\a b-> a + itlength (undefined :: Proxy $(typC)) b) 0 a
     |]
 
