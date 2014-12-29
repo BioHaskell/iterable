@@ -1,5 +1,5 @@
 name:                iterable
-version:             3.0
+version:             3.0.1
 stability:           stable
 homepage:            https://github.com/BioHaskell/iterable
 package-url:         http://hackage.haskell.org/package/iterable
@@ -22,7 +22,7 @@ bug-reports:         mailto:mjgajda@googlemail.com
 
 build-type:          Simple
 cabal-version:       >=1.8
-tested-with:         GHC==7.0.3, GHC==7.2.1, GHC==7.4.2, GHC==7.6.2, GHC==7.6.3
+tested-with:         GHC==7.4.2, GHC==7.6.3, GHC==7.8.4
 data-files:          README.md
 extra-source-files:  changelog
 
